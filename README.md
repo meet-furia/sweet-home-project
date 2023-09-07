@@ -18,15 +18,12 @@ The Hotel Room Booking Application is built using the following technologies and
 - **Spring Boot Data JPA**: For data persistence and database interactions.
 - **Spring Boot Actuator**: For monitoring and managing services.
 - **MySQL**: The relational database used for data storage and management.
-- **(Add any additional technologies or tools specific to your project)**
 
 ## Rationale for Microservices
 The project is divided into microservices to adhere to the single responsibility principle, ensuring that each service handles a specific function. This architectural choice allows for easy updates and scalability. For example, adding new payment methods can be done by updating only the payment service.
 
 ## Application Workflow
 Here's a high-level overview of how the Hotel Room Booking Application works:
-
-![Application Workflow](‪C:\Users\Meet\Programming\Back-End\Java\Spring Boot\Upgrad Spring-Boot Graded Projects\Sweet Home WorkFlow.png) 
 
 1. The API Gateway, Booking Service, Payment Service, and Eureka Server play key roles in the application's functionality.
 2. The API Gateway routes external requests to the appropriate microservices internally.
