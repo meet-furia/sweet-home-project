@@ -1,4 +1,4 @@
-# Hotel Room Booking Application
+# Sweet Home - Hotel Room Booking Application
 
 ## Overview
 The Hotel Room Booking Application is designed as a microservices-based system for booking hotel rooms. It consists of three main microservices:
