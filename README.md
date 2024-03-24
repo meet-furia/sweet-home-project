@@ -27,10 +27,9 @@ Here's a high-level overview of how the Hotel Room Booking Application works:
 
 1. The API Gateway, Booking Service, Payment Service, and Eureka Server play key roles in the application's functionality.
 2. The API Gateway routes external requests to the appropriate microservices internally.
-3. The Booking Service collects user booking information and returns room availability and prices.
-4. The Payment Service processes payments and returns transaction details.
+3. The Booking Service collects user booking information and returns room availability and prices. The Booking Service further communicates with the Payment Service for confirming Payment and sends back the confirmation booking to the client only after getting Transaction Id from the Payment Service. If the payment fails Booking Service sends "Booking unsuccesful" message to the client.
+4. The Payment Service processes payments and returns transaction details to the Booking Service.
 5. The Eureka Server is responsible for service registration and discovery, allowing microservices to locate each other.
 
 ## Rationale for Communication
-Synchronous communication (REST) is chosen between the Booking and Payment services because the response ('transactionId') is required before confirming bookings and sending messages.
-
+Synchronous communication (REST) is chosen between the Booking and Payment services because the response ('transactionId') is required by Booking Service from Payment Service for comfirmation of the Payment Received. 
